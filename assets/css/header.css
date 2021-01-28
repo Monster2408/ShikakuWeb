@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*ヘッダーまわりはサイトに合わせて調整してください*/
+header {
+  padding: 10px;
+  margin: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 9999;
+  border-bottom: 1px solid black;
+}
+
+header a {
+  text-decoration: none;
+  color: #00F034;
+}
+
+header a:hover {
+  text-decoration: none;
+  color: #00E431;
+}
+/*# sourceMappingURL=header.css.map */

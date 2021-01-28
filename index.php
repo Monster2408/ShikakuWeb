@@ -7,7 +7,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<title>トップページ</title>
+		<title>資格・検定対策サイト | トップページ</title>
 		<?php echo $html["common_head"]; ?>
 		<style>
 
@@ -31,7 +31,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 					<!-- パンくずリスト終 -->
 
 					<!-- ↓↓↓↓↓ ここから本文 ↓↓↓↓↓ -->
-					<h1 class="design">資格・検定デモサイト</h1>	
+					<h1 class="design">資格・検定対策サイト</h1>	
 					<h2 class="design">問題</h2>
 					<p>
 						<a href="<?php echo $conf["url"]; ?>/2syu-denki/">第二種電気工事士筆記試験</a>

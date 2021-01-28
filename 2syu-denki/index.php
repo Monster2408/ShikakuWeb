@@ -10,7 +10,7 @@ if (!empty($_POST["file-xml"])) {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<title>第二種電気工事士筆記試験対策</title>
+		<title>第二種電気工事士筆記試験対策 | 資格・検定対策サイト</title>
 		<?php echo $html["common_head"]; ?>
 		<style>
             table.siken {

@@ -85,7 +85,7 @@ if (!empty($_POST["file-xml"])) {
 							<meta itemprop="position" content="1" />
 						</li>
                         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-							<a itemprop="item" href="<?php echo $conf["url"]; ?>/2syu-denki">
+							<a itemprop="item" href="<?php echo $conf["url"]; ?>/2syu-denki/">
 								<span itemprop="name">第二種電気工事士</span>
 							</a>
 							<meta itemprop="position" content="2" />

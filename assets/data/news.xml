@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 最新記事を一番上に書こう -->
+<rss>
+    <blog>
+        <!--
+        <item>
+            <title>タイトル</title>
+            <link>#</link>
+            <date>2020/5/1</date>
+            <category>null</category>
+            <img>null</img>
+        </item>
+        -->
+
+        <item>
+            <title>ニュース枠を作成</title>
+            <link>http://www.shikaku-net.xyz/</link>
+            <date>2021/01/31</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>リリースでっす！！</title>
+            <link>http://www.shikaku-net.xyz/</link>
+            <date>2021/01/18</date>
+            <category>ホームページ</category>
+        </item>
+    </blog>
+</rss>

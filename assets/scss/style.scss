@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-$mainColor: #F5A9A9;
+$mainColor: #00a2ff;
 
 $footer-height: 90px; /*パソコン用*/
 $smart-footer-height: 90px; /* スマホ用 */
@@ -64,99 +64,169 @@ h2.design {
 	margin-bottom: 25px;
 }
 
-/* 
-	ページ全体を見やすくするためのやーつ
-*/
-
-div.text_box {
-    width:900px;
-    height:auto;
-    margin:10px auto;
-    padding:20px;
-    border:1px solid black;
-    background-color: rgba(255,255,255,0.8);
-    text-align: left;
-	position: relative;
-    z-index: 3;
-    a[target="_blank"]:after {
-        font-family: "Font Awesome 5 Free";
-        content: '\f35d';
-        font-weight: 900;
-        margin: 0 3px 0 2px;
+.news-ca {
+    text-decoration: none;
+    .card{
+        width: 100%;
+        height: auto;
+        background: #ffffff;
+        margin: 5px;
+        overflow: hidden;
+        border-radius: 8px;
+        &:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,.2);
+            .title {
+                color: #000;
+            }
+            .text{
+                color: #000;
+            }
+            .imgframe {
+                -ms-filter: blur(2px);
+                filter: blur(2px);
+            }
+        }
+        .imgframe {
+            width: 100%;
+            height: auto;
+            padding-top: 56.25%;
+            background: url(https://placehold.jp/640x360.png) no-repeat center;
+            background-size: cover;
+            box-sizing: border-box;
+        }
+        .textbox {
+            width: 100%;
+            height: auto;
+            padding: 20px 18px;
+            background: #ffffff;
+            box-sizing: border-box;
+            & > * + *{
+                margin-top: 10px;
+            }
+        }
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 125%;
+            color: rgb(80, 80, 80);
+        }
+        .text{
+            font-size: 12px;
+            line-height: 150%;
+            color: rgb(177, 91, 0);
+        }
     }
 }
 
-div.or_box {
-    width:90%;
-    height:auto;
-    margin:10px auto;
-    padding:10px;
-    border:1px solid black;
-    background-color: rgba(255,255,255,0.8);
-    text-align: left;
-	position: relative;
-    z-index: 2;
-    ul {
-        list-style: none;
-        margin:  0; 
-        padding: 0;
-        text-indent: -1em;
-        margin-left: 1em;
-        li::before {
-            font-family: "Font Awesome 5 Free";
-            content: '\f111';
-            color: #4b4b4b;
-            font-weight: 300;
-            margin-right: 5px;
-            font-size: 10px;
+.read-more {
+    font-size: 20px;
+    text-align: right;
+    a {
+        text-decoration: none;
+        color: #888;
+        &:hover {
+            color: #888;
+            &:after {
+                margin-left: 10px;
+            }
         }
-        li.unimplement::before {
+        &:after {
             font-family: "Font Awesome 5 Free";
-            content: '\f071';
-            color: #ff0000;
+            content: '\f054';
             font-weight: 900;
+            margin-left: 5px;
         }
     }
 }
 
-ul.mokuji {
-	color: $mainColor;/*文字色*/
-	border: dashed 2px $mainColor;/*破線 太さ 色*/
-	background: #FDF1F1; /*背景色*/
-    padding: 0.5em 0.5em 0.5em 2em;
-    li {
-        line-height: 1.5;
-        padding: 0.5em 0;
+.firstAccent {
+    font-size:20px;
+    font-family: "ヒラギノ明朝 ProN W6","HiraMinProN-W6","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+    font-weight: 700;
+    &:first-letter {
+        font-size:50px;
+        color:#ff0000;
     }
 }
 
-div.wrapper {
-	position: relative;/*←相対位置*/
-	box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
-	min-height: 100vh;
-    padding-bottom: $footer-height;
-	padding-top: 70px;/*追記部分*/
+.wrapper {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mainBox {
+    width: 1000px;
+    padding: 10px 0;
+    min-height: 600px;
+    border: solid 1px #000;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.898);
+    .contents {
+        margin: 10px;
+    }
+    img {
+        max-width: 500px;
+        width: 100%;
+    }
+    iframe {
+        max-width: 500px;
+        width: 100%;
+    }
 }
 
 /*
 	パンくずリスト
 */
 .breadcrumb {
-	margin: 10px 0 10px 0;
-	padding: 0;
+    margin: 10px;
+    padding: 0;
     list-style: none;
     li {
-        display: inline;/*横に並ぶように*/
+        display: inline;
+        /*横に並ぶように*/
         list-style: none;
-        font-weight: bold;/*太字*/
-        &:after {/* ▶を表示*/
+        font-weight: bold;
+        /*太字*/
+        &:after {
+            /* ▶を表示*/
             font-family: "Font Awesome 5 Free";
             content: '\f0da';
             padding: 0 0.2em;
             color: silver;
         }
-        &:last-child:after {
-            content: '';
+        &:last-child {
+            &:after {
+                content: '';
+            }
+            a {
+                text-decoration: none;
+                color: #888;
+                display: inline-block;
+                position: relative;
+                text-decoration: none;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background: #888;
+                }
+                &:hover {
+                    cursor: pointer;
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
         }
         &:first-child a:before {
             /*家アイコン*/
@@ -169,34 +239,32 @@ div.wrapper {
         a {
             text-decoration: none;
             color: #888;
+            display: inline-block;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background: #888;
+                transition: all 0.3s ease 0s;
+            }
             &:hover {
-                text-decoration: underline;
+                cursor: pointer;
+                &::after {
+                    width: 100%;
+                }
             }
         }
     }
 }
 
-@media screen and (max-width: 920px) {
-
-	/* ELSE */
-	div.text_box {
-		width:100%;
-		height:auto;
-		margin:10px auto;
-		padding:20px;
-		border:1px solid black;
-		background-color: rgba(255,255,255,0.8);
-		text-align: left;
-		position: relative;
-		z-index: 3;
-	}
-	div.wrapper {
-		position: relative;/*←相対位置*/
-		box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
-		min-height: 100vh;
-		padding-bottom: $smart-footer-height;/*←footerの高さ*/
-	}
-	div.pc_cm {
-		display:none;
-	}
+@media screen and (max-width: 1000px) {
+    .mainBox {
+        max-width: 100%;
+        width: 100%;
+        border: none;
+    }
 }

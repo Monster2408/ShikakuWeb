@@ -72,9 +72,9 @@ if (!empty($_POST["file-xml"])) {
 	</head>
 	<body>
 		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
-		<div class="wrapper">
-			<div class="contents">
-				<div class="text_box">
+        <div class="wrapper">
+            <div class="mainBox">
+				<div class="contents">
 					<!-- パンくずリスト始 -->
 					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 						<li itemprop="itemListElement" itemscope

@@ -13,6 +13,19 @@ $conf = [
     "keywords" => "第二種電気工事士,電気工事士,対策,筆記試験,独学"
 ];
 
+function isNearDate($text){
+    $date = new DateTime();
+    $date->setTimeZone( new DateTimeZone('Asia/Tokyo'));
+    $str = $date->format('Y/m/d');
+    for ($i = 1; $i <= 7; $i++) {
+        if ($str === $text) {
+            return true;
+        }
+        $str = date('Y/m/d', strtotime('+' . $i . ' day'));
+    }
+    return false; 
+}
+
 
 // 全ページ共通ヘッダー
 $html["common_head"] = <<<__EOM__
@@ -24,10 +37,11 @@ $html["common_head"] = <<<__EOM__
     <meta http-equiv="Content-Type" content="text/html; charset=Shift_Jis">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="{$conf["url"]}/assets/css/style.css" type="text/css">
-    <link rel="stylesheet" href="{$conf["url"]}/assets/css/header.css" type="text/css">
-    <link rel="stylesheet" href="{$conf["url"]}/assets/css/footer.css" type="text/css">
-    <link rel="stylesheet" href="{$conf["url"]}/assets/css/lightbox.css" type="text/css">
+    <link rel="stylesheet" href="{$conf["url"]}/assets/css/style.min.css" type="text/css">
+    <link rel="stylesheet" href="{$conf["url"]}/assets/css/header.min.css" type="text/css">
+    <link rel="stylesheet" href="{$conf["url"]}/assets/css/footer.min.css" type="text/css">
+    <link rel="stylesheet" href="{$conf["url"]}/assets/css/lightbox.min.css" type="text/css">
+    <script src="{$conf["url"]}/assets/js/header.js"></script>
     <!-- その他 -->
     <meta name="keywords" content="{$conf["keywords"]}" />
 __EOM__;
@@ -37,6 +51,7 @@ $html["common_foot"] = <<<__EOM__
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="{$conf["url"]}/assets/js/lightbox.js"></script>
+    <script src="{$conf["url"]}/assets/js/footer.js"></script>
     <script>
         lightbox.option({
             'wrapAround': true,

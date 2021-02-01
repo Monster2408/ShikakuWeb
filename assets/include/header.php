@@ -1,7 +1,5 @@
 <header id="header">
-    <div id="loading">
-        <img src="https://tamotech.blog/wp-content/uploads/2020/11/loading.gif" alt="">
-    </div>
+    <div  id="loading"><div class="loader">Loading...</div></div>
     <div class="logo-area">
         <a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="<?php echo $conf["url"]; ?>/assets/img/icons/logo.png"></img></a>
     </div>

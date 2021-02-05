@@ -1,7 +1,7 @@
 <header id="header">
     <div  id="loading"><div class="loader">Loading...</div></div>
     <div class="logo-area">
-        <a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="<?php echo $conf["url"]; ?>/assets/img/icons/logo.png"></img></a>
+        <a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="https://i.gyazo.com/aa2cf37fefbd22c420ba1130952bd29d.png"></img></a>
     </div>
     <div class="menu-btn">
         <div class="btn-trigger">
